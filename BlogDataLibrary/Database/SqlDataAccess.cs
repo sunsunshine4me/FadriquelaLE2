@@ -32,7 +32,7 @@ namespace BlogDataLibrary.Database
 
             using (IDbConnection connection = new SqlConnection(connectionString))
             {
-                List<T> rows = connection.Query<T>(
+                 List<T> rows = connection.Query<T>(
                     sqlStatement,
                     parameters,
                     commandType: commandType).ToList();
